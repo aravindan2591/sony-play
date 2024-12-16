@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css or any other global CSS file */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap");
+@layer base {
+  :root {
+    --background: #09101a;
+    --foreground: #ffffff;
+
+    --cta-background: #ffffff;
+    --cta-foreground: #09101a;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-raleway;
+  }
+
+  .main-content {
+    @apply bg-background text-foreground;
+  }
+
+  .gradient-border-frame {
+    position: relative;
+    background: transparent; /* Transparent content */
+    box-sizing: border-box;
+    width: 112px;
+    height: 112px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 2px; /* Border thickness */
+      background: linear-gradient(-125deg, #ffffff 0%, #000000 40%, #ffffff 100%); /* Gradient colors */
+      border-radius: 12px; /* Optional rounded corners */
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Mask to make inner part transparent */
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &.gradient-border-frame-desktop {
+      width: 128px;
+      height: 128px;
+      &::before {
+        padding: 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "lib": ["DOM", "DOM.Iterable", "es2015"],
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "ESNext",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx",  // Or "react" for React 16.x
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "src/**/*"
+    ],    "exclude": ["node_modules", "build"]
+  }
+  
+
+ 
+  
